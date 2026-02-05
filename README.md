@@ -50,81 +50,25 @@ Use **machine learning** to classify URLs using:
 - Production-grade inference
 - Interview-ready architecture
 
----
+## 📊 Exploratory Data Analysis (EDA)
 
-## 🏗️ High-Level Architecture
+![alt text](image.png)
 
-Client (Browser / CSV Upload)
-|
-v
-+------------------+
-| Flask App |
-| (app.py) |
-+------------------+
-|
-v
-+--------------------------+
-| Prediction Pipeline |
-| predict_pipeline.py |
-+--------------------------+
-|
-v
-+--------------------------+
-| Preprocessor + Model |
-| preprocessing.pkl |
-| model.pkl |
-+--------------------------+
+EDA Insights:
 
+URL-based indicators are dominant
 
----
+Binary features strongly influence predictions
 
-## 📁 Repository Structure
+Behavioral and domain signals improve accuracy
 
-
-
-PHISHING-CLASSIFIER/
-│
-├── app.py
-├── Dockerfile
-├── requirements.txt
-├── model.pkl
-│
-├── config/
-│ ├── training_schema.json
-│ └── model.yaml
-│
-├── src/
-│ ├── pipeline/
-│ │ ├── train_pipeline.py
-│ │ └── predict_pipeline.py
-│ │
-│ ├── components/
-│ │ ├── data_ingestion.py
-│ │ ├── data_validation.py
-│ │ ├── data_transformation.py
-│ │ └── model_trainer.py
-│ │
-│ ├── data_access/
-│ │ └── phising_data.py
-│ │
-│ ├── utils/
-│ │ ├── main_utils.py
-│ │ ├── logger.py
-│ │ └── exception.py
-│
-├── templates/
-│ └── prediction.html
-│
-├── static/css/
-│ └── style.css
-│
-├── logs/
-├── artifacts/
-├── prediction_artifacts/
-└── predictions/
-
-
----
+📈 Feature Categories
+Category	Examples
+URL Structure	Length, IP usage, symbols
+Domain Info	Age, DNS record
+Security	SSL state, HTTPS token
+Behavior	Redirects, popups
+Reputation	Traffic, page rank
 
 ## 🌐 Flask Application Layer
 
@@ -249,27 +193,6 @@ Flow:
 6. Save output CSV
 7. Download predictions
 
----
-
-## 📊 Exploratory Data Analysis (EDA)
-
-![alt text](image.png)
-
-EDA Insights:
-
-URL-based indicators are dominant
-
-Binary features strongly influence predictions
-
-Behavioral and domain signals improve accuracy
-
-📈 Feature Categories
-Category	Examples
-URL Structure	Length, IP usage, symbols
-Domain Info	Age, DNS record
-Security	SSL state, HTTPS token
-Behavior	Redirects, popups
-Reputation	Traffic, page rank
 🪵 Logging & Observability
 
 Centralized logging with:
