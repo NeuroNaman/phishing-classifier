@@ -1,0 +1,53 @@
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environments
+# =========================
+env/
+venv/
+.venv/
+phishfiner/
+
+# =========================
+# Logs & runtime files
+# =========================
+logs/
+*.log
+
+# =========================
+# ML artifacts & outputs
+# =========================
+artifacts/
+prediction_artifacts/
+model.pkl
+*.joblib
+*.h5
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Build / metadata
+# =========================
+src.egg-info/
+*.egg-info/
+
+# =========================
+# OS & editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+
+# =========================
+# Secrets
+# =========================
+.env
